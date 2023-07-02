@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Item Search</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 style="text-align: center;">Food Item Search</h2>
+    <form id="searchForm">
+      <div class="form-group">
+        <label for="searchTerm" >Search by Product or Brand:</label>
+        <input type="text" class="form-control" id="searchTerm" placeholder="E.g., Honey, Toothpaste...">
+        
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+      <br>
+      <p style="color: red;">please click the button before shopping...</p>
+    </form>
+  </div>
+
+  <div id="results" class="container">
+    <h2>Available Food Items</h2>
+    <ul id="foodList" class="list-group"></ul>
+    <button onclick="addToCart()" class="btn btn-primary">Add to Cart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

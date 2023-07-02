@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome, <span id="welcomeUsername"></span>!</h2>
+    <p id="loginMessage"></p>
+    <a href="changepassword.html" id="changePasswordBtn" class="btn btn-primary">Change Password</button>
+      <br>
+    <a href="logout.html" class="btn btn-danger">Logout</a>
+      
+  </div>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+      var welcomeUsername = document.getElementById("welcomeUsername");
+      var loginMessage = document.getElementById("loginMessage");
+
+      var username = sessionStorage.getItem("username");
+      if (username) {
+        welcomeUsername.textContent = username;
+        loginMessage.textContent = "You are logged in.";
+      } else {
+        loginMessage.textContent = "You need to log in.";
+        document.getElementById("changePasswordBtn").disabled = true;
+      }
+    });
+  </script>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

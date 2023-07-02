@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body onload="displayOrderDetails()">
+  <div class="container">
+    <h2>Order Details</h2>
+    <ul id="orderList" class="list-group"></ul>
+    <h4>Total: <span id="totalAmount">/-</span></h4>
+    <button onclick="placeOrder()" class="btn btn-primary">Place Order</button>
+  </div>
+
+  <script src="order.js"></script>
+  
+</body>
+</html>
